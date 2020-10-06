@@ -234,9 +234,9 @@ class NextjsComponent extends Component {
       apiEdgeLambda
     ] = await Promise.all([
       this.load("@serverless/aws-s3"),
-      this.load("@sls-next/aws-cloudfront"),
-      this.load("@sls-next/aws-lambda", "defaultEdgeLambda"),
-      this.load("@sls-next/aws-lambda", "apiEdgeLambda")
+      this.load("@drafted/aws-cloudfront"),
+      this.load("@drafted/aws-lambda", "defaultEdgeLambda"),
+      this.load("@drafted/aws-lambda", "apiEdgeLambda")
     ]);
 
     const bucketOutputs = await bucket({
@@ -555,7 +555,7 @@ class NextjsComponent extends Component {
 
     const { domain, subdomain } = obtainDomains(inputs.domain);
     if (domain && subdomain) {
-      const domainComponent = await this.load("@sls-next/domain");
+      const domainComponent = await this.load("@drafted/domain");
       const domainOutputs = await domainComponent({
         privateZone: false,
         domain,
@@ -578,8 +578,8 @@ class NextjsComponent extends Component {
   async remove(): Promise<void> {
     const [bucket, cloudfront, domain] = await Promise.all([
       this.load("@serverless/aws-s3"),
-      this.load("@sls-next/aws-cloudfront"),
-      this.load("@sls-next/domain")
+      this.load("@drafted/aws-cloudfront"),
+      this.load("@drafted/domain")
     ]);
 
     await bucket.remove();

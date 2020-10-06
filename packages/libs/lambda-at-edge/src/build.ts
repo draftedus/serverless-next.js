@@ -233,7 +233,7 @@ class Builder {
           )
         : Promise.resolve(),
       fse.copy(
-        require.resolve("@sls-next/lambda-at-edge/dist/default-handler.js"),
+        require.resolve("@drafted/lambda-at-edge/dist/default-handler.js"),
         join(this.outputDir, DEFAULT_LAMBDA_CODE_DIR, "index.js")
       ),
       fse.writeJson(
@@ -314,15 +314,11 @@ class Builder {
       this.buildOptions?.handler
         ? fse.copy(
             join(this.nextConfigDir, this.buildOptions.handler),
-            join(
-              this.outputDir,
-              API_LAMBDA_CODE_DIR,
-              this.buildOptions.handler
-            )
+            join(this.outputDir, API_LAMBDA_CODE_DIR, this.buildOptions.handler)
           )
         : Promise.resolve(),
       fse.copy(
-        require.resolve("@sls-next/lambda-at-edge/dist/api-handler.js"),
+        require.resolve("@drafted/lambda-at-edge/dist/api-handler.js"),
         join(this.outputDir, API_LAMBDA_CODE_DIR, "index.js")
       ),
       fse.copy(

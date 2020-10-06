@@ -78,7 +78,7 @@ Add your next application to the serverless.yml:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}" # it is recommended you pin the latest stable version of serverless-next.js
+  component: "@drafted/serverless-component@{version_here}" # it is recommended you pin the latest stable version of serverless-next.js
 ```
 
 Set your AWS credentials as environment variables:
@@ -112,7 +112,7 @@ The serverless next.js component will automatically generate an SSL certificate 
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     domain: "example.com" # sub-domain defaults to www
 ```
@@ -123,7 +123,7 @@ You can also configure a `subdomain`:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     domain: ["sub", "example.com"] # [ sub-domain, domain ]
 ```
@@ -136,7 +136,7 @@ To specify your own CloudFront inputs, just add any [aws-cloudfront inputs](http
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     cloudfront:
       # if you want to use an existing cloudfront distribution, provide it here
@@ -214,7 +214,7 @@ You may customize either the `Cache-Control` header `value` and the regex of whi
 
 ```yaml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     publicDirectoryCache:
       value: public, max-age=604800
@@ -226,7 +226,7 @@ If you don't want browsers to cache assets from the public directory, you can di
 
 ```yaml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     publicDirectoryCache: false
 ```
@@ -239,7 +239,7 @@ By default the Lambda@Edge functions run using AWSLambdaBasicExecutionRole which
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     policy: "arn:aws:iam::123456789012:policy/MyCustomPolicy"
 ```
@@ -301,7 +301,7 @@ Both **default** and **api** edge lambdas will be assigned 512mb of memory by de
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     memory: 1024
 ```
@@ -312,7 +312,7 @@ Values for **default** and **api** lambdas can be separately defined by assignin
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     memory:
       defaultLambda: 1024
@@ -325,7 +325,7 @@ The same pattern can be followed for specifying the Node.js runtime (nodejs12.x 
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     runtime:
       defaultLambda: "nodejs10.x"
@@ -338,7 +338,7 @@ Similarly, the timeout by default is 10 seconds. To customise you can:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     timeout:
       defaultLambda: 20
@@ -353,7 +353,7 @@ You can also set a custom name for **default** and **api** lambdas - if not the 
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     name:
       defaultLambda: fooDefaultLambda
@@ -411,7 +411,7 @@ Custom inputs can be configured like this:
 
 ```yaml
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     bucketName: my-bucket
 ```
@@ -427,7 +427,7 @@ Make sure your `serverless.yml` uses the `serverless-components` format. [server
 ```yml
 # serverless.yml
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
 
 myTable:
   component: serverless/aws-dynamodb
@@ -446,7 +446,7 @@ provider:
   region: eu-west-1
 
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
 
 Resources: ...
 ```
@@ -511,15 +511,12 @@ By default, CloudFront sets the `Host` header to the S3 origin host name. You ne
 
 ```yml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   inputs:
     cloudfront:
       api/*:
         forward:
-          headers:
-            [
-                Host
-            ]
+          headers: [Host]
 ```
 
 #### Should I use the [serverless-plugin](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-plugin) or this component?
@@ -549,7 +546,7 @@ See the sample below for an advanced `build` setup that includes passing additio
 myDatabase:
   component: MY_DATABASE_COMPNENT
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@drafted/serverless-component@{version_here}"
   build:
     args: ["build", "custom/path/to/pages"]
     env:

@@ -11,7 +11,7 @@ Lambda Proxy Integration event structure documentation can be found [here](https
 ## Usage
 
 ```js
-const compat = require("@sls-next/next-aws-lambda");
+const compat = require("@drafted/next-aws-lambda");
 const page = require(".next/serverless/pages/somePage.js");
 
 // using callback

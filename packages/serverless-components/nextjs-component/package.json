@@ -31,13 +31,13 @@
     "node": ">=10.11.0"
   },
   "dependencies": {
-    "@drafted/aws-cloudfront": "link:../aws-cloudfront",
-    "@drafted/aws-lambda": "link:../aws-lambda",
-    "@drafted/cloudfront": "link:../../libs/cloudfront",
-    "@drafted/domain": "link:../domain",
-    "@drafted/lambda-at-edge": "link:../../libs/lambda-at-edge",
-    "@drafted/next-aws-cloudfront": "link:../../compat-layers/lambda-at-edge-compat",
-    "@drafted/s3-static-assets": "link:../../libs/s3-static-assets",
+    "@drafted/aws-cloudfront": "1.3.0",
+    "@drafted/aws-lambda": "1.0.3",
+    "@drafted/cloudfront": "1.0.4",
+    "@drafted/domain": "1.0.3-alpha.1",
+    "@drafted/lambda-at-edge": "1.7.0-alpha.5",
+    "@drafted/next-aws-cloudfront": "1.6.0",
+    "@drafted/s3-static-assets": "1.4.0",
     "@serverless/aws-s3": "^4.2.0",
     "@serverless/core": "^1.1.2",
     "aws-sdk": "^2.702.0",
@@ -46,5 +46,6 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
     "typescript": "^3.9.6"
-  }
+  },
+  "gitHead": "ae8461020d369455759e1d7f6df2f0cbd17c53e6"
 }
