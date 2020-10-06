@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/aws-lambda",
+  "name": "@drafted/aws-lambda",
   "version": "1.0.2",
   "main": "serverless.js",
   "publishConfig": {

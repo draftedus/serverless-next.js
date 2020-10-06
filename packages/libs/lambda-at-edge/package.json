@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/lambda-at-edge",
+  "name": "@drafted/lambda-at-edge",
   "publishConfig": {
     "access": "public"
   },
