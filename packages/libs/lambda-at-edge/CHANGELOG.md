@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0-alpha.4 (2020-10-06)
+
+### Bug Fixes
+
+- **build:** undo eslint fix from const to let ([a246b26](https://github.com/danielcondemarin/serverless-next.js/commit/a246b262ba8281cb21ac23563be6e3b2a4ba9a83))
+- **build:** use API_LAMBDA_CODE_DIR when needed, add test ([ff8f882](https://github.com/danielcondemarin/serverless-next.js/commit/ff8f882ac9a9d0a876cde5736685bd37f97ec4e0))
+- **builder:** pass customHandler into builder to make more generic ([6eb3619](https://github.com/danielcondemarin/serverless-next.js/commit/6eb3619f59bac66ab3c8cdf07a2e765baedee1cc))
+- **handler:** copy `handler.js` from nextConfig root into lambda fn ([925721c](https://github.com/danielcondemarin/serverless-next.js/commit/925721c56fd3d89bb72ec49ae3fa2450eafd3c18))
+- **lambda-at-edge:** exclude prerender js files from default handler if no API routes are used ([#600](https://github.com/danielcondemarin/serverless-next.js/issues/600)) ([73d0f48](https://github.com/danielcondemarin/serverless-next.js/commit/73d0f4821212ae7b3d0a46d3ca34fef6425277ab))
+- **lambda-at-edge:** fix broken redirects with full URLs as destinations ([#638](https://github.com/danielcondemarin/serverless-next.js/issues/638)) ([ee95e54](https://github.com/danielcondemarin/serverless-next.js/commit/ee95e549cdb620865d536435e74e1ea3026ecd20))
+- **lambda-at-edge:** fix data request routing / client-side navigation for SSR index page ([#574](https://github.com/danielcondemarin/serverless-next.js/issues/574)) ([f580786](https://github.com/danielcondemarin/serverless-next.js/commit/f580786e5859f217e5ce79824cdaa0ef17ef0e42))
+- **lambda-at-edge:** fix for 404s on public files ([#577](https://github.com/danielcondemarin/serverless-next.js/issues/577)) ([a854139](https://github.com/danielcondemarin/serverless-next.js/commit/a854139f4344530de1a42268828231a4d38c7c91))
+- **lambda-at-edge:** fix reading next.config.js in build step when it exports a function ([#569](https://github.com/danielcondemarin/serverless-next.js/issues/569)) ([16272b4](https://github.com/danielcondemarin/serverless-next.js/commit/16272b43b8d1cfcdebe1eddad91a8bae7bcc890c))
+- **lambda-at-edge:** fix routing for pages with basePath ([#572](https://github.com/danielcondemarin/serverless-next.js/issues/572)) ([b185a7a](https://github.com/danielcondemarin/serverless-next.js/commit/b185a7a088b58651780542d1539660c951cd63a6))
+- **lambda-at-edge:** ignore package.json during serverless-trace ([#552](https://github.com/danielcondemarin/serverless-next.js/issues/552)) ([d21f1d5](https://github.com/danielcondemarin/serverless-next.js/commit/d21f1d56b8b21bad38b86ec91ae5f26c8c9472bc))
+- **lambda-at-edge:** move path-to-regexp to prod deps ([e4d9dbd](https://github.com/danielcondemarin/serverless-next.js/commit/e4d9dbd3f12b12cd5f10936d0daf511134c70ae7))
+- **lambda-at-edge:** render Next 500 page when SSR render fails, and ensure 404 pages return 404 status codes ([#570](https://github.com/danielcondemarin/serverless-next.js/issues/570)) ([bdd1e3f](https://github.com/danielcondemarin/serverless-next.js/commit/bdd1e3f9feb7e0c9eec42de7298882dce084aa67))
+- **lambda-at-edge:** use `handler` to match nextjs-component ([59245ac](https://github.com/danielcondemarin/serverless-next.js/commit/59245ac7712c2689be582d2cce9a232815d3fef9))
+- **lambda-at-edge, e2e-tests:** fix issue where SSR data request should be directly rendered in Lambda, not retrieved from S3 ([2fa8910](https://github.com/danielcondemarin/serverless-next.js/commit/2fa8910aea85626a5ae37efd4c8a2e6ece86c4ce))
+
+### Features
+
+- **lambda-at-edge:** add opt in lambda execution times logging ([#549](https://github.com/danielcondemarin/serverless-next.js/issues/549)) ([066bd27](https://github.com/danielcondemarin/serverless-next.js/commit/066bd270ce8b8f915298b7bac51c2aeb3ab27126))
+- **lambda-at-edge:** support custom redirects ([#627](https://github.com/danielcondemarin/serverless-next.js/issues/627)) ([d2f9679](https://github.com/danielcondemarin/serverless-next.js/commit/d2f9679a5074285cb8a5111d4c1e34f8bbde0b0f))
+- **lambda-at-edge:** support custom redirects from API routes ([#640](https://github.com/danielcondemarin/serverless-next.js/issues/640)) ([b68d46a](https://github.com/danielcondemarin/serverless-next.js/commit/b68d46a4592a48ee55a35e089e4d8554edadaa17))
+- **lambda-at-edge:** support trailing slash / non-trailing slash redirects ([#556](https://github.com/danielcondemarin/serverless-next.js/issues/556)) ([ca63b80](https://github.com/danielcondemarin/serverless-next.js/commit/ca63b80d4bf784ebfdc5a32352a53dde85b4b4d9))
+- **lambda-at-edge:** use new aws s3 client for faster require time ([#583](https://github.com/danielcondemarin/serverless-next.js/issues/583)) ([f9eef45](https://github.com/danielcondemarin/serverless-next.js/commit/f9eef458552e5ff5ee60e9b43df7ccf221a2ec0c))
+- **lambda-at-edge, next-aws-cloudfront:** support Preview Mode ([#562](https://github.com/danielcondemarin/serverless-next.js/issues/562)) ([5e1ea38](https://github.com/danielcondemarin/serverless-next.js/commit/5e1ea3891e48d75de5973902a014b67f14c8380a))
+- **serverless-component, lambda-at-edge, lambda-at-edge-compat, s3-static-assets:** add support for getStaticPaths fallback true ([#544](https://github.com/danielcondemarin/serverless-next.js/issues/544)) ([a08217b](https://github.com/danielcondemarin/serverless-next.js/commit/a08217ba26ea90f67c562fe4ae9510b617d14d08))
+
 # [1.7.0-alpha.3](https://github.com/danielcondemarin/serverless-next.js/compare/@sls-next/lambda-at-edge@1.7.0-alpha.2...@sls-next/lambda-at-edge@1.7.0-alpha.3) (2020-09-30)
 
 ### Features

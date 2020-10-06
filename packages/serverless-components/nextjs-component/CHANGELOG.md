@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.18.0-alpha.0 (2020-10-06)
+
+### Bug Fixes
+
+- **builder:** pass customHandler into builder to make more generic ([6eb3619](https://github.com/serverless-nextjs/serverless-next.js/commit/6eb3619f59bac66ab3c8cdf07a2e765baedee1cc))
+- **custom-handler:** add custom input test ([adab2aa](https://github.com/serverless-nextjs/serverless-next.js/commit/adab2aa14717868a76d94baa5bd6162fae1e2dc3))
+- **handler:** copy `handler.js` from nextConfig root into lambda fn ([925721c](https://github.com/serverless-nextjs/serverless-next.js/commit/925721c56fd3d89bb72ec49ae3fa2450eafd3c18))
+- **nextjs-component:** allow all CloudFront HTTP methods for default caching behavior ([#609](https://github.com/serverless-nextjs/serverless-next.js/issues/609)) ([6066fa1](https://github.com/serverless-nextjs/serverless-next.js/commit/6066fa1bf4e1fb823039108158a42f7af69a90d6))
+- **serverless-component:** use `handler` instead of `customHandler` ([9d46627](https://github.com/serverless-nextjs/serverless-next.js/commit/9d4662721e791d987ca90f3966061a438818e5ba))
+- **serverless-component:** wait sequentially for resources to be removed, so as to avoid race conditions ([#588](https://github.com/serverless-nextjs/serverless-next.js/issues/588)) ([7bcb032](https://github.com/serverless-nextjs/serverless-next.js/commit/7bcb032f3199f245643fab91e8b671083a857cc3))
+- **tests/component:** add customHandler.js file ([5fd4553](https://github.com/serverless-nextjs/serverless-next.js/commit/5fd45533d3572e350f365f3e6719fdefb870f269))
+
+### Features
+
+- **aws-cloudfront, s3-static-assets:** support setting individual min, max, default CloudFront TTLs, update Cache-Control headers and TTLs for \_next/data files ([#593](https://github.com/serverless-nextjs/serverless-next.js/issues/593)) ([fb8e61d](https://github.com/serverless-nextjs/serverless-next.js/commit/fb8e61dc50b11c0e5966548a8c84b58e495ea748))
+- **aws-cloudfront, serverless-component:** add cloudfront custom error responses ([#590](https://github.com/serverless-nextjs/serverless-next.js/issues/590)) ([f3d2a17](https://github.com/serverless-nextjs/serverless-next.js/commit/f3d2a17b2fac5e9bb67b1f6ed5201c8128600314))
+- **handler:** allow `handler` input for custom handler ([6fa04d8](https://github.com/serverless-nextjs/serverless-next.js/commit/6fa04d80ad7377940f0700af33abd5db853b6b0b))
+- **lambda-at-edge:** add opt in lambda execution times logging ([#549](https://github.com/serverless-nextjs/serverless-next.js/issues/549)) ([066bd27](https://github.com/serverless-nextjs/serverless-next.js/commit/066bd270ce8b8f915298b7bac51c2aeb3ab27126))
+- **nextjs-component:** allow setting custom API cache behavior ([#623](https://github.com/serverless-nextjs/serverless-next.js/issues/623)) ([ca8094b](https://github.com/serverless-nextjs/serverless-next.js/commit/ca8094b4d9b9541493410dd830a3c85f54250448))
+- **serverless-component:** allow passing an inline policy ([#575](https://github.com/serverless-nextjs/serverless-next.js/issues/575)) ([05ddcc9](https://github.com/serverless-nextjs/serverless-next.js/commit/05ddcc98c03e642b8ab9fda3e20334215a8cb017))
+- **serverless-component, lambda-at-edge, lambda-at-edge-compat, s3-static-assets:** add support for getStaticPaths fallback true ([#544](https://github.com/serverless-nextjs/serverless-next.js/issues/544)) ([a08217b](https://github.com/serverless-nextjs/serverless-next.js/commit/a08217ba26ea90f67c562fe4ae9510b617d14d08))
+
 ## [1.17.1-alpha.3](https://github.com/serverless-nextjs/serverless-next.js/compare/@sls-next/serverless-component@1.17.1-alpha.2...@sls-next/serverless-component@1.17.1-alpha.3) (2020-09-30)
 
 **Note:** Version bump only for package @sls-next/serverless-component
