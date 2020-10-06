@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-alpha.7](https://github.com/danielcondemarin/serverless-next.js/compare/@drafted/lambda-at-edge@1.7.0-alpha.6...@drafted/lambda-at-edge@1.7.0-alpha.7) (2020-10-06)
+
+**Note:** Version bump only for package @drafted/lambda-at-edge
+
 # [1.7.0-alpha.6](https://github.com/danielcondemarin/serverless-next.js/compare/@drafted/lambda-at-edge@1.7.0-alpha.5...@drafted/lambda-at-edge@1.7.0-alpha.6) (2020-10-06)
 
 **Note:** Version bump only for package @drafted/lambda-at-edge
