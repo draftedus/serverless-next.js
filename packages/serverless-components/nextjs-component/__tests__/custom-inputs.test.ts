@@ -1,10 +1,10 @@
 import fse from "fs-extra";
 import path from "path";
-import { mockDomain } from "@sls-next/domain";
+import { mockDomain } from "@drafted/domain";
 import { mockS3 } from "@serverless/aws-s3";
 import { mockUpload } from "aws-sdk";
-import { mockLambda, mockLambdaPublish } from "@sls-next/aws-lambda";
-import { mockCloudFront } from "@sls-next/aws-cloudfront";
+import { mockLambda, mockLambdaPublish } from "@drafted/aws-lambda";
+import { mockCloudFront } from "@drafted/aws-cloudfront";
 
 import NextjsComponent from "../src/component";
 import obtainDomains from "../src/lib/obtainDomains";

@@ -4,7 +4,7 @@ import PrerenderManifest from "./prerender-manifest.json";
 import Manifest from "./manifest.json";
 // @ts-ignore
 import RoutesManifestJson from "./routes-manifest.json";
-import lambdaAtEdgeCompat from "@sls-next/next-aws-cloudfront";
+import lambdaAtEdgeCompat from "@drafted/next-aws-cloudfront";
 import cookie from "cookie";
 import {
   CloudFrontRequest,

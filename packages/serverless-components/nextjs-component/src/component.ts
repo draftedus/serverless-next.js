@@ -1,15 +1,15 @@
 import { Component } from "@serverless/core";
 import { readJSON, pathExists } from "fs-extra";
 import { resolve, join } from "path";
-import { Builder } from "@sls-next/lambda-at-edge";
+import { Builder } from "@drafted/lambda-at-edge";
 import {
   OriginRequestDefaultHandlerManifest as BuildManifest,
   OriginRequestDefaultHandlerManifest,
   OriginRequestApiHandlerManifest,
   RoutesManifest
-} from "@sls-next/lambda-at-edge/types";
-import uploadAssetsToS3 from "@sls-next/s3-static-assets";
-import createInvalidation from "@sls-next/cloudfront";
+} from "@drafted/lambda-at-edge/types";
+import uploadAssetsToS3 from "@drafted/s3-static-assets";
+import createInvalidation from "@drafted/cloudfront";
 import obtainDomains from "./lib/obtainDomains";
 import { DEFAULT_LAMBDA_CODE_DIR, API_LAMBDA_CODE_DIR } from "./constants";
 import type {
