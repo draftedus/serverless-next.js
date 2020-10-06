@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@drafted/next-aws-lambda@2.6.3":
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/@drafted/next-aws-lambda/-/next-aws-lambda-2.6.3.tgz#9ed2ca3c1549eb6c9ae6a2b956b716c1545d2664"
+  integrity sha512-XqDqi3C/QLCgM2egS60+7PZz1kgiH6zeIS6zlTtJssH0tTBSauQ6wHM0SifXhsuY06+XCmgYeVuMBFI68+JAKQ==
+
 "@mapbox/eslint-config-mapbox@^1.0.0":
   version "1.2.1"
   resolved "https://registry.npmjs.org/@mapbox/eslint-config-mapbox/-/eslint-config-mapbox-1.2.1.tgz#f0dc80d29a336a5477b146d9d32a75afc310a5e4"
@@ -15,10 +20,6 @@
     "@mapbox/eslint-config-mapbox" "^1.0.0"
     minimist "^1.1.0"
     s3signed "^0.1.0"
-
-"@drafted/next-aws-lambda@link:../../compat-layers/apigw-lambda-compat":
-  version "0.0.0"
-  uid ""
 
 ansi-styles@^3.2.1:
   version "3.2.1"

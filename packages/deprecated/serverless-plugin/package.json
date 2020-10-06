@@ -24,7 +24,7 @@
     "directory": "packages/serverless-plugin"
   },
   "dependencies": {
-    "@drafted/next-aws-lambda": "link:../../compat-layers/apigw-lambda-compat",
+    "@drafted/next-aws-lambda": "2.6.3",
     "@mapbox/s3urls": "^1.5.3",
     "chalk": "^2.4.2",
     "debug": "^4.1.1",
@@ -37,5 +37,6 @@
   },
   "engines": {
     "node": ">=8.5.0"
-  }
+  },
+  "gitHead": "5a0571970049a8e2dfe63f4aa45e9bc7e14bd41a"
 }
