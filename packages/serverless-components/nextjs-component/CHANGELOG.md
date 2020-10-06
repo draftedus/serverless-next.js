@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0-alpha.1](https://github.com/serverless-nextjs/serverless-next.js/compare/@drafted/serverless-component@1.18.0-alpha.0...@drafted/serverless-component@1.18.0-alpha.1) (2020-10-06)
+
+### Bug Fixes
+
+- **imports:** update to @drafted/ ([018e27a](https://github.com/serverless-nextjs/serverless-next.js/commit/018e27a7419c8a36259af77c1a9ab877d0ac6c5e))
+
 # 1.18.0-alpha.0 (2020-10-06)
 
 ### Bug Fixes

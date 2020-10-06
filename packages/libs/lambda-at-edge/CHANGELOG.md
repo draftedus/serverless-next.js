@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-alpha.5](https://github.com/danielcondemarin/serverless-next.js/compare/@drafted/lambda-at-edge@1.7.0-alpha.4...@drafted/lambda-at-edge@1.7.0-alpha.5) (2020-10-06)
+
+### Bug Fixes
+
+- **imports:** update to @drafted/ ([018e27a](https://github.com/danielcondemarin/serverless-next.js/commit/018e27a7419c8a36259af77c1a9ab877d0ac6c5e))
+
 # 1.7.0-alpha.4 (2020-10-06)
 
 ### Bug Fixes
